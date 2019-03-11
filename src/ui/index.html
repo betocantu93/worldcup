@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>worldcup</title>
-    <meta name="description" content="">
+    <meta name="description" content="This is a World Cup PWA written in Ember.js Octane Edition">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
@@ -15,6 +15,11 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+    <noscript>
+      <div style="border: 1px solid purple; padding: 10px">
+        <span style="color:red; font-size: 80px;">JavaScript is not enabled and we need it!</span>
+      </div>
+    </noscript>
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>

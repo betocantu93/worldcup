@@ -3,11 +3,24 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
+
+  const isProd = process.env.EMBER_ENV === 'production';
+
   let app = new EmberApp(defaults, {
     prember: {
       urls: [
         '/'
       ]
+    },
+    'esw-cache-fallback': {
+      patterns: [
+        'https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/(.+)'
+      ],
+    },
+    'ember-service-worker': {
+      versionStrategy: 'every-build',
+      registrationStrategy: 'inline',
+      enabled: isProd
     }
   });
 
