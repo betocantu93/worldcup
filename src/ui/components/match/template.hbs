@@ -1,0 +1,15 @@
+<div class="match-container">
+  <ul>
+    <li class="stadium">
+      {{@stadium.firstObject.name}} | {{format-date @date}}
+    </li>
+    <li class="home {{if (gt @homeResult @awayResult) "winner"}}">
+      {{@homeTeam.firstObject.emojiString}}
+      {{@homeTeam.firstObject.name}} {{@homeResult}}
+    </li>
+    <li class="away {{if (gt @awayResult @homeResult) "winner"}}">
+      {{@awayTeam.firstObject.emojiString}}
+      {{@awayTeam.firstObject.name}} {{@awayResult}}
+    </li>
+  </ul>
+</div>

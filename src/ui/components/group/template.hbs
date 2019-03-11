@@ -1,0 +1,17 @@
+<div class="group-container">
+  <h1>
+    {{@group.name}}
+  </h1>
+  {{#each @group.matches as |match|}}
+    <Match
+      @awayTeam={{group-teams (array match) @groupTeams "away"}}
+	  @awayResult={{match.away_result}}
+	  @homeResult={{match.home_result}}
+	  @date={{match.date}}
+      @homeTeam={{group-teams (array match) @groupTeams "home"}}
+      @stadium={{group-stadiums (array match) @groupStadiums}}
+     />
+
+  {{/each}}
+</div>
+{{!-- @awayTeam={{}} @homeTeam={{}} @stadium={{}} --}}

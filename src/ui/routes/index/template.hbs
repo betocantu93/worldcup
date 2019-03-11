@@ -1,0 +1,9 @@
+{{#each-in this.model.groups as |key group|}}
+  <div class="card">
+    <Group
+      @group={{group}}
+      @groupTeams={{group-teams group.matches this.model.teams}}
+      @groupStadiums={{group-stadiums group.matches this.model.stadiums}}
+     />
+  </div>
+{{/each-in}}

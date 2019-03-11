@@ -1,0 +1,40 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	background-color: #f1ecec;
+}
+
+.navbar {
+	background-color: blueviolet;
+	padding: 1rem;
+	font-size: 14px;
+	h1 {
+		margin: 0;
+	}
+	color: white;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.card {
+	background: #fff;
+	border-radius: 2px;
+	margin: 1rem;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.group-container {
+	padding: 40px;
+	.match-container {
+		ul {
+			padding: 0;
+			.stadium {
+				font-size: 12px
+			}
+			list-style: none;
+
+			.winner {
+				color: green;
+			}
+		}
+	}
+}
